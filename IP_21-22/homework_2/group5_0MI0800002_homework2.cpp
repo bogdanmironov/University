@@ -16,7 +16,7 @@ bool isWhitespaceBeforePunc(char);
 void autoCorrect(char[MAX_SIZE_INPUT_TEXT], char[MAX_SIZE_DICT][MAX_SIZE_DICT_ENTRY]);
 
 int main() {
-    int textlen;
+    size_t textlen;
     char text[MAX_SIZE_INPUT_TEXT];
     do {
         std::cout<< "Enter text size" << std::endl;
@@ -25,7 +25,7 @@ int main() {
     std::cout<< "Enter text" << std::endl;
     std::cin.getline(text, textlen);
     
-    int dictlen;
+    size_t dictlen;
     char dict[MAX_SIZE_DICT][MAX_SIZE_DICT_ENTRY];
     do {
         std::cout<< "Enter dict size" << std::endl;
