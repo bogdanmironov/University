@@ -17,5 +17,6 @@ bool isPunctoation(char c)
 }
 
 int main() {
-
+    char dict[2][100] = {"End", "hi"};
+    std::cout<< dict[0] << std::endl;
 }
