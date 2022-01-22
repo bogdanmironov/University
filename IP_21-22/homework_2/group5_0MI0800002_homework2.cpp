@@ -33,7 +33,7 @@ int main() {
     } while(dictlen <= 0 || dictlen > MAX_SIZE_DICT);
     std::cout<< "Enter dict" << std::endl;
     for (size_t i = 0; i < dictlen; ++i) {
-        std::cin.getline(text, MAX_SIZE_DICT_ENTRY);
+        std::cin.getline(dict[i], MAX_SIZE_DICT_ENTRY);
     }
 
     std::cout<< "Correcting..." << std::endl;
