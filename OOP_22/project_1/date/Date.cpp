@@ -3,6 +3,12 @@
 #include <iostream>
 #include <exception>
 
+#define YEAR_LENGTH (365 * 30 * 24 * 60 * 60)
+#define MONTH_LENGTH (30 * 24 * 60 * 60)
+#define DAY_LENGTH (24 * 60 * 60)
+#define HOUR_LENGTH (60 * 60)
+#define MIN_LENGTH (60)
+
 //Constructors
 Date::Date() : Date(1970, 0, 0, 0, 0, 0) {}
 
@@ -25,20 +31,20 @@ Date::Date(size_t year, size_t month, size_t day) {
 }
 
 Date::Date(size_t timestamp) {
-    setYear((timestamp / (365 * 30 * 24 * 60 * 60)) + 1970);
-    timestamp %= (365 * 30 * 24 * 60 * 60);
+    setYear((timestamp / YEAR_LENGTH) + 1970);
+    timestamp %= YEAR_LENGTH;
 
-    setMonth(timestamp / (30 * 24 * 60 * 60));
-    timestamp %= (30 * 24 * 60 * 60);
+    setMonth(timestamp / MONTH_LENGTH);
+    timestamp %= MONTH_LENGTH;
 
-    setDay(timestamp / (24 * 60 * 60));
-    timestamp %= (24 * 60 * 60);
+    setDay(timestamp / DAY_LENGTH);
+    timestamp %= DAY_LENGTH;
 
-    setHour(timestamp / (60 * 60));
-	timestamp %= (60 * 60);
+    setHour(timestamp / HOUR_LENGTH);
+	timestamp %= HOUR_LENGTH;
 
-	setMin(timestamp / 60);
-	timestamp %= 60;
+	setMin(timestamp / MIN_LENGTH);
+	timestamp %= MIN_LENGTH;
 
 	setSecond(timestamp);
 }
@@ -109,4 +115,28 @@ void Date::setSecond(size_t second) {
         throw std::exception();
     }
 	this->second = second;
+}
+
+
+//Functions
+size_t Date::convertToUnixTimestamp() const {
+    return ((year - 1970) * YEAR_LENGTH)
+    + (month * MONTH_LENGTH)
+    + (day * DAY_LENGTH)
+    + (hour * HOUR_LENGTH)
+    + (min * MIN_LENGTH)
+    + (second);
+}
+
+int Date::compare(const Date &other) const {
+    size_t timestamp = convertToUnixTimestamp();
+    size_t otherTimestamp = other.convertToUnixTimestamp();
+
+    if (timestamp > otherTimestamp) {
+        return 1;
+    } else if (timestamp < otherTimestamp) {
+        return -1;
+    } else {
+        return 0;
+    }
 }
