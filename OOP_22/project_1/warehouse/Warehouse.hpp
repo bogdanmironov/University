@@ -2,6 +2,8 @@
 #include <iostream>
 
 class Warehouse {
+private:
+    
 public:
     Warehouse() = default;
     ~Warehouse();

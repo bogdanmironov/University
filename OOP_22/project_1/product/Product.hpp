@@ -1,15 +1,13 @@
 #pragma once
 #include <iostream>
+#include "Date.hpp"
 
 class Product {
     char *name = nullptr;
     char *maufacturer = nullptr;
     char *comment = nullptr;
-    int expiryDate = 0; //TODO Make date
-    int admissionDate = 0; //TODO Make date
-    int availableQuantity = 0;
+    Date expiryDate;
+    Date admissionDate;
+    int availableQuantity;
     int placement; //TODO Make class
-
-
-    
 };
