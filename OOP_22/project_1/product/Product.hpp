@@ -9,4 +9,7 @@ class Product {
     int admissionDate = 0; //TODO Make date
     int availableQuantity = 0;
     int placement; //TODO Make class
+
+
+    
 };
