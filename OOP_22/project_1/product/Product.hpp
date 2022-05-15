@@ -10,4 +10,7 @@ class Product {
     Date admissionDate;
     int availableQuantity;
     int placement; //TODO Make class
+public:
+    int compare(const Product& other) const;
+    void print() const;
 };
