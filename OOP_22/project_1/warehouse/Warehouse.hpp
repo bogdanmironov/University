@@ -1,17 +1,20 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 #include "Product.hpp"
 
 class Warehouse {
     Product *products = nullptr;
-    int productCapacity;
+    int productCapacity, productsCount;
+
+    size_t getFileSize(std::ifstream& f) const;
 public:
-    Warehouse() = default;
+    Warehouse();
     ~Warehouse();
 
-    void load();
     void print() const;
-    void addProduct();
+    void addProduct(Product product);
+    void saveProducts();
     void removeProduct();
     void availabilityCheck();
     void cleanup();
