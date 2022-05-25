@@ -58,4 +58,6 @@ int main () {
     std::cout << "2:   a: " << c2.getA() << " | b: " << c2.getB() << " | c: " << c2.getC() << std::endl;
 
     std::cout << "3:   a: " << c3.getA() << " | b: " << c3.getB() << " | c: " << c3.getC() << std::endl;
+
+    return 0;
 }
