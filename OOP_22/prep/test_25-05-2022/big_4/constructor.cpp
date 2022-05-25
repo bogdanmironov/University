@@ -8,20 +8,35 @@ public:
         b = 20;
     }
 
+    Construct(int a, int b) {
+        setA(a);
+        setB(b);
+    }
 
-    int getA() {
+
+    int getA() const {
         return a;
     }
 
-    int getB() {
+    int getB() const {
         return b;
+    }
+
+    void setA(int a) {
+        this->a = a;
+    }
+    
+    void setB(int b) {
+        this->b = b;
     }
 
 };
 
 
 int main () {
-    Construct c;
+    Construct c1, c2(30, 40);
 
-    std::cout << "a: " << c.getA() << " | b: " << c.getB() << std::endl;
+    std::cout << "1:   a: " << c1.getA() << " | b: " << c1.getB() << std::endl;
+
+    std::cout << "2:   a: " << c2.getA() << " | b: " << c2.getB() << std::endl;
 }
