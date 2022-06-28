@@ -7,7 +7,17 @@
 
 template<>
 void Library<std::string>::print_title() {
-    std::cout << *book << std::endl;
+    std::cout << "Title: " << *book << std::endl;
+}
+
+template<>
+void Library<int>::print_title() {
+    std::cout << "Int: " << *book << std::endl;
+}
+
+template <typename T>
+void Library<T>::print_title() {
+    std::cout << "Other: " << *book << std::endl;
 }
 
 template<typename T>
