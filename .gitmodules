@@ -4,3 +4,6 @@
 [submodule "UniPython24"]
 	path = UniPython24
 	url = https://github.com/bogdanmironov/UniPython24
+[submodule "AudioToTextClassifier"]
+	path = AudioToTextClassifier
+	url = git@github.com:bogdanmironov/AudioToTextClassifier.git
