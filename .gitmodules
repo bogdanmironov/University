@@ -7,3 +7,6 @@
 [submodule "AudioToTextClassifier"]
 	path = AudioToTextClassifier
 	url = git@github.com:bogdanmironov/AudioToTextClassifier.git
+[submodule "AICourse"]
+	path = AICourse
+	url = git@github.com:bogdanmironov/AICourse.git
