@@ -1,9 +1,6 @@
 [submodule "JMT"]
 	path = JMT
 	url = https://github.com/bogdanmironov/JMT
-[submodule "AIAgents2025"]
-	path = AIAgents2025
-	url = https://github.com/bogdanmironov/AIAgents2025
 [submodule "UniPython24"]
 	path = UniPython24
 	url = https://github.com/bogdanmironov/UniPython24
