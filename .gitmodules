@@ -10,3 +10,6 @@
 [submodule "AICourse"]
 	path = AICourse
 	url = git@github.com:bogdanmironov/AICourse.git
+[submodule "devops-image-publisher"]
+	path = devops-image-publisher
+	url = git@github.com:Stelllarce/devops-image-publisher.git
